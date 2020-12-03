@@ -933,7 +933,7 @@
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 1 12000 -1 200 140 1 0 0;
-#X restore 754 113 graph;
+#X restore 753 114 graph;
 #X obj 82 690 soundfiler;
 #X msg 81 651 read -resize sounds/5.wav sound1;
 #N canvas 0 22 450 278 (subpatch) 0;
@@ -6580,8 +6580,8 @@
 #X obj 642 309 t b b b;
 #X obj 708 362 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 644 285 bng 15 250 50 0 reset_wavetable reset_wavetable_rcv
-reset_wavetable 17 7 0 10 -262144 -1 -1;
+#X obj 644 285 bng 15 250 50 0 empty empty reset_wavetable 17 7 0 10
+-262144 -1 -1;
 #X msg 605 360 1 1000;
 #X obj 439 522 tabread4~ wavetable;
 #X obj 441 482 line~;
@@ -6599,14 +6599,14 @@ reset_wavetable 17 7 0 10 -262144 -1 -1;
 #X obj 471 590 tabread4~ sound1;
 #X obj 455 643 dac~;
 #X msg 425 431 44100 \$1;
-#X obj 287 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 339 635 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 296 683 5 0 0 0 - - -;
 #X obj 294 662 array size sound1;
-#X obj 291 603 loadbang;
+#X obj 329 609 loadbang;
 #X obj 908 588 line~;
 #X obj 931 341 t b b b b;
-#X obj 1066 567 random 44100;
+#X obj 1053 569 random 44100;
 #X obj 922 668 tabwrite~ wavetable;
 #X msg 1042 609 start \$1;
 #X msg 841 630 stop;
@@ -6648,9 +6648,14 @@ reset_wavetable 17 7 0 10 -262144 -1 -1;
 #X obj 923 436 random 50;
 #X obj 80 613 r reset_all;
 #X obj 643 259 r reset_all;
-#X obj 191 784 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 200 747 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 191 804 s reset_all;
+#X obj 185 568 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 189 589 openpanel;
+#X msg 180 613 read -resize \$1 sound1;
+#X obj 272 583 r opensound;
 #X connect 1 0 27 0;
 #X connect 2 0 57 0;
 #X connect 8 0 22 0;
@@ -6723,3 +6728,7 @@ reset_wavetable 17 7 0 10 -262144 -1 -1;
 #X connect 75 0 9 0;
 #X connect 76 0 16 0;
 #X connect 77 0 78 0;
+#X connect 79 0 80 0;
+#X connect 80 0 81 0;
+#X connect 81 0 8 0;
+#X connect 82 0 80 0;
