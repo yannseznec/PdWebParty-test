@@ -40,7 +40,7 @@
 -99865 -262144 0;
 #X obj 46 53 cnv 15 290 450 cnv2-s cnv2-r empty 20 12 0 14 -228856
 -66577 0;
-#X obj 19 282 bng 50 250 50 0 single_sound single_sound_rcv single_sound
+#X obj 118 224 bng 50 250 50 0 single_sound single_sound_rcv single_sound
 17 7 0 10 -262144 -1 -1;
 #X obj 199 290 tgl 50 0 sound_sequence sound_sequence_rcv sound_sequence
 17 7 0 10 -262144 -1 -1 0 1;

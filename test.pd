@@ -17,7 +17,7 @@
 #X obj 608 383 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 666 75 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6300 1;
+-1 -1 0 1;
 #X msg 665 215 minvel \$1;
 #X floatatom 713 181 5 0 0 0 - - -;
 #X obj 646 298 unpack f f;
@@ -33,14 +33,14 @@
 #X floatatom 494 361 5 0 0 0 - - -;
 #X obj 398 449 s currentlocation;
 #X obj 784 474 hsl 195 15 0 16 0 0 empty currentlocation empty -2 -8
-0 10 -262144 -1 -1 14550 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 556 301 r single_sound;
 #X obj 441 239 r sound_sequence;
 #X obj 43 14 cnv 15 300 550 cnv-s cnv-r PdWebParty-Tests 80 24 0 24
 -99865 -262144 0;
 #X obj 46 53 cnv 15 290 450 cnv2-s cnv2-r empty 20 12 0 14 -228856
 -66577 0;
-#X obj 19 282 bng 50 250 50 0 single_sound single_sound_rcv single_sound
+#X obj 100 358 bng 50 250 50 0 single_sound single_sound_rcv single_sound
 17 7 0 10 -262144 -1 -1;
 #X obj 199 290 tgl 50 0 sound_sequence sound_sequence_rcv sound_sequence
 17 7 0 10 -262144 -1 -1 0 1;
