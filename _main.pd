@@ -1,5 +1,5 @@
-#N canvas 321 28 1033 738 10;
-#X msg 40 48 \; pd dsp 1;
+#N canvas 334 101 1033 738 10;
+#X msg 381 82 \; pd dsp 1;
 #X msg 360 655 all \$1;
 #X msg 288 313 1;
 #X obj 288 335 + 1;
@@ -37,12 +37,17 @@
 #X obj 239 448 s currentlocation;
 #X obj 625 473 hsl 195 15 0 16 0 0 empty currentlocation empty -2 -8
 0 10 -262144 -1 -1 10912 1;
-#X obj 25 114 bng 50 250 50 0 single_sound empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 397 300 r single_sound;
-#X obj 100 116 tgl 50 0 sound_sequence empty empty 17 7 0 10 -262144
--1 -1 0 1;
 #X obj 282 238 r sound_sequence;
+#X obj 4 10 cnv 15 300 550 cnv-s cnv-r PdWebParty 80 24 0 24 -99865
+-262144 0;
+#X obj 9 55 cnv 15 290 450 cnv2-s cnv2-r empty 20 12 0 14 -228856 -66577
+0;
+#X text 15 59 PdWebParty:;
+#X obj 44 292 bng 50 250 50 0 single_sound empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 119 294 tgl 50 0 sound_sequence empty empty 17 7 0 10 -262144
+-1 -1 0 1;
 #X connect 1 0 7 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
@@ -68,4 +73,4 @@
 #X connect 24 0 25 0;
 #X connect 25 0 1 0;
 #X connect 26 0 15 1;
-#X connect 30 0 2 0;
+#X connect 29 0 2 0;
